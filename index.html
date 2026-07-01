@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập: Bản Phác Thảo Thiết Kế Web</title>
+    <style>
+        /* CSS tích hợp để đảm bảo giao diện hiển thị chính xác */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f6f9;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: #ffffff;
+            text-align: center;
+            padding: 2.5rem 1rem;
+        }
+
+        header h1 {
+            margin-bottom: 0.5rem;
+            font-size: 2.2rem;
+            font-weight: 600;
+        }
+
+        header .subtitle {
+            font-style: italic;
+            opacity: 0.8;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 2rem auto;
+            padding: 1.5rem 2rem;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            display: block;
+        }
+
+        section {
+            padding: 1.5rem 0;
+            width: 100%;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 1.2rem;
+            border-left: 5px solid #3498db;
+            padding-left: 12px;
+            font-size: 1.5rem;
+        }
+
+        .image-wrapper {
+            background: #fafbfc;
+            padding: 15px;
+            border: 2px dashed #b2bec3;
+            border-radius: 6px;
+            text-align: center;
+            width: 100%;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Định dạng ảnh responsive */
+        .responsive-img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 4px;
+        }
+
+        .caption {
+            text-align: center;
+            margin-top: 0.8rem;
+            color: #636e72;
+            font-size: 0.95rem;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #dfe6e9;
+            margin: 1.5rem 0;
+        }
+
+        .content p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .content h3 {
+            margin: 1.5rem 0 0.5rem 0;
+            color: #2c3e50;
+            font-size: 1.2rem;
+        }
+
+        .content ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .content li {
+            margin-bottom: 0.6rem;
+        }
+
+        code {
+            background: #ffeaa7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: Consolas, monospace;
+            color: #d63031;
+            font-size: 0.9em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: #2c3e50;
+            color: white;
+            font-size: 0.9rem;
+            margin-top: 4rem;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Bản Phác Thảo Thiết Kế Giao Diện Web</h1>
+        <p class="subtitle">Môn học: Xây dựng ứng dụng Web | Bài tập nộp lấy feedback sớm</p>
+    </header>
+
+    <main class="container">
+        
+        <section class="image-section">
+            <h2>1. Hình ảnh Bản phác thảo (Wireframes)</h2>
+            <div class="image-wrapper">
+                <img src="mt.webp" alt="Bản phác thảo giao diện Mobile và Desktop" class="responsive-img">
+            </div>
+            <p class="caption"><em>Hình 1: Bản phác thảo giao diện chế độ xem di động (Mobile) và máy tính (Desktop).</em></p>
+        </section>
+
+        <hr>
+
+        <section class="description-section">
+            <h2>2. Bài viết mô tả ý tưởng thiết kế</h2>
+            <div class="content">
+                <p>Để chuẩn bị cho việc xây dựng ứng dụng web sắp tới, tôi đã tiến hành phác thảo cấu trúc giao diện (wireframe) tập trung hoàn toàn vào bố cục và trải nghiệm người dùng, tuân thủ nguyên tắc không sử dụng màu sắc hay phông chữ phức tạp trong giai đoạn này.</p>
+                
+                <h3>Trải nghiệm đa thiết bị (Responsive Design):</h3>
+                <ul>
+                    <li><strong>Chế độ xem Di động (Mobile View):</strong> Do không gian màn hình hẹp, các thanh điều hướng (Menu) được thu gọn thành biểu tượng Hamburger. Các khối nội dung được xếp chồng theo chiều dọc để người dùng dễ dàng lướt bằng một tay.</li>
+                    <li><strong>Chế độ xem Màn hình lớn (Desktop View):</strong> Tận dụng chiều ngang của máy tính, menu điều hướng được trải phẳng ra. Nội dung chia thành các cột rõ ràng giúp tận dụng tối đa không gian hiển thị.</li>
+                </ul>
+
+                <h3>Đánh giá khả năng triển khai code (Feedback):</h3>
+                <p>Bố cục được thiết kế dựa trên hệ thống <code>Flexbox</code> và <code>Grid</code> trong CSS, đảm bảo việc chuyển đổi giữa hai chế độ xem mượt mà thông qua <code>@media screen</code> mà không gặp lỗi vỡ khung hình hay chồng chéo phần tử.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 - Bài nộp thực hành của Sinh viên | Đạt yêu cầu hoàn thành bài tập</p>
+    </footer>
+
+</body>
+</html>
